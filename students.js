@@ -53,7 +53,7 @@ addStudents("ram","65");
 addStudents("kgf","55"); 
 addStudents("messi","25"); 
 
-showData();
+
 
 
 console.log("\n Top Scores:" );

@@ -27,23 +27,33 @@ function getStudentName(name){
 
 function showData() {
     const graded = getGrades();
+    const top = getTopScores();
+    const jesro = getStudentName("JESRO");
 
-    let output = "Name | Score | Grade\n";
+    let output = "Name | Score | Grade\n\n";
 
     graded.forEach(s => {
         output += `${s.name} | ${s.score} | ${s.grade}\n`;
     });
+
+    output += "\n--- TOP SCORES ---\n";
+    top.forEach(s => {
+        output += `${s.name} | ${s.score}\n`;
+    });
+
+    output += "\n--- SEARCH RESULT ---\n";
+    output += JSON.stringify(jesro, null, 2);
 
     document.getElementById("output").innerText = output;
 }
 
 addStudents("jesro","75"); 
 addStudents("leo","95"); 
-addStudents("parthiban","65"); 
-addStudents("thoothukudi kgf","55"); 
-addStudents("ronaldo","25"); 
+addStudents("ram","65"); 
+addStudents("kgf","55"); 
+addStudents("messi","25"); 
 
-displayAll();
+showData();
 
 
 console.log("\n Top Scores:" );
@@ -51,4 +61,4 @@ console.log(getTopScores())
 
 
 console.log("\n Display Jesro:");
-console.log(getStudentName("JESRO"))
+console.log(getStudentName("jesro"))

@@ -25,14 +25,16 @@ function getStudentName(name){
     return students.find((students) => students.name == name)
 }
 
-function displayAll(){
+function showData() {
     const graded = getGrades();
-    console.log("students data");
-    console.log("Name | Score | Grade");
-    graded.forEach((students) => {
-        console.log(`${students.name} | ${students.score} | ${students.grade}`)
-    })
 
+    let output = "Name | Score | Grade\n";
+
+    graded.forEach(s => {
+        output += `${s.name} | ${s.score} | ${s.grade}\n`;
+    });
+
+    document.getElementById("output").innerText = output;
 }
 
 addStudents("jesro","75"); 

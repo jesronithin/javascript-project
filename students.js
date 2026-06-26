@@ -41,7 +41,7 @@ function showData() {
         output += `${s.name} | ${s.score}\n`;
     });
 
-    output += "\n--- SEARCH RESULT ---\n";
+    output += "\n--- jesro's data ---\n";
     output += JSON.stringify(jesro, null, 2);
 
     document.getElementById("output").innerText = output;
